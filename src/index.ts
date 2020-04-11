@@ -1,5 +1,9 @@
 var OKCupid = require('okcupidjs')
 var okc = new OKCupid()
+require('dotenv').config();
+
+
+console.log(process.env);
 
 okc.login('okc_username', 'okc_password', function(err, res, body) {
   var query = {
