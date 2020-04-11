@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mrpandat/OkCuboomer#readme",
   "dependencies": {
+    "@types/node": "^13.11.1",
     "dotenv": "^8.2.0",
     "okcupidjs": "^1.1.6",
     "typecript": "0.0.1-security"
