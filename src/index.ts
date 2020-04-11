@@ -1,7 +1,14 @@
-var OKCupid = require('okcupidjs')
-var okc = new OKCupid()
-require('dotenv').config();
+const OKCupid = require('okcupidjs');
+const dotenv = require("dotenv");
+const fs = require('fs');
 
+var okc = new OKCupid()
+
+if(fs.existsSync('../.env')) {
+    dotenv.config({ path: '.env' });
+} else {
+    dotenv.config({ path: '.env.test' });
+}
 
 console.log(process.env);
 
