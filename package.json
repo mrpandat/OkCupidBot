@@ -2,7 +2,7 @@
   "name": "okcuboomer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mrpandat/OkCuboomer#readme",
   "dependencies": {
-    "okcupidjs": "^1.1.6"
+    "okcupidjs": "^1.1.6",
+    "typecript": "0.0.1-security"
   }
 }
