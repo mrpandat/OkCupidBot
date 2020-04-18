@@ -1,11 +1,10 @@
 const OKCupid = require('okcupidjs');
 const dotenv = require("dotenv");
 const fs = require('fs');
-const Promise = require('bluebird');
 
-const okc = Promise.promisifyAll(new OKCupid());
+const okc = new OKCupid();
 
-if(fs.existsSync('../.env')) {
+if(fs.existsSync('.env')) {
     dotenv.config({ path: '.env' });
 } else {
     dotenv.config({ path: '.env.test' });
@@ -13,9 +12,11 @@ if(fs.existsSync('../.env')) {
 
 const {okc_username, okc_password} = process.env;
 
-okc.loginAsync(okc_username, okc_password, function(err, res, body) {
+okc.login(okc_username, okc_password, function(err, res, body) {
   if (err) {
     console.log("Failed to login.");
+    console.log(body);
+    process.exit();
   } else {
     console.log("Login succed.")
   }
